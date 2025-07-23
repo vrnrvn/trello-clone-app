@@ -292,7 +292,7 @@ const handleDragEnd = (e: React.DragEvent<HTMLDivElement>) => {
         `.task-card[data-task-id="${task.id}"]`
       );
       if (originalCard) {
-        originalCardRef.current = originalCard;
+        originalCardRef.current = originalCard as HTMLDivElement;
         
         originalCard.style.opacity = '0.3';
         originalCard.style.transform = 'scale(0.95)';
